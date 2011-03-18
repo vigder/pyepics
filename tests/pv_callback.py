@@ -10,7 +10,7 @@ mypv = epics.PV(pvname)
 write = sys.stdout.write
 
 write('Created PV = %s\n' % mypv)
-def onChanges(pvname=None, value=None, char_value=None, **kw):
+def onChanges(pvname=None, value=None, char_value=None, **kws):
     write( 'PV %s %s, %s Changed!\n' % (pvname, repr(value), char_value))
 
 mypv.add_callback(onChanges)

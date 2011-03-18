@@ -194,11 +194,3 @@ class CA_BasicTests(unittest.TestCase):
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase( CA_BasicTests)
     unittest.TextTestRunner(verbosity=1).run(suite)
-
-#     chid = ca.create_channel(pvnames.int_pv,
-#                              callback=onConnect)
-#     
-#     time.sleep(0.1)
-#     print chid, ca.name(chid)
-#     print CONN_DAT
-# ;    

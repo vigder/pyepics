@@ -41,7 +41,7 @@ motor1 = '13IDE:m1'
 #### 
 #  Here, provide a PV that changes at least once very 10 seconds
 updating_pv1  = '13IDA:DMM1Ch3_calc.VAL'
-updating_str1 = '13XRM:edb:clientID'
+updating_str1 = '13BMD:edb:clientID'
 
 #### 
 #  Here, provide a list of PVs that  change at least once very 10 seconds
@@ -72,9 +72,9 @@ string_pvlist = ['13BMA:m1.DESC',
 
 #### alarm test
 
-alarm_pv = '13XRM:m1.VAL'
+alarm_pv = '13IDE:m1.VAL'
 alarm_comp='ge'
-alarm_trippoint = 2.5
+alarm_trippoint = 1.40
 
 #### motor list (for connect.py)
 #  Here, provide a list of Epics Motors

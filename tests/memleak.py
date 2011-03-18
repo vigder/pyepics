@@ -40,19 +40,21 @@ def run(t=10.0):
     epics.ca.pend_io(1.0)
     for p in pvs: p.get()
     print 'Monitoring %i PVs'  % len(pvs)
+    global N_new
+    N_new = 0
     monitor_events(t=t)
     
     print 'Destroying PVs: '
     for i in pvs:
         i.disconnect()
-    print epics.ca._cache.keys()
+
     epics.ca.show_cache()
     epics.ca.poll(0.01, 10.0)
     time.sleep(1.0)
     
-for i in range(4):
+for i in range(30):
     print "==run #  ", i+1
-    run(t=15)
+    run(t=10)
 
 print 'memory leak test complete.'
 
